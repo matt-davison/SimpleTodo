@@ -1,7 +1,5 @@
 package com.example.simpletodo;
 
-import android.content.Context;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,16 +12,22 @@ import java.util.List;
 
 public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> {
 
-    List<String> items;
-    OnLongClickListener longClickListener;
-
     public interface OnLongClickListener {
         void onItemLongClicked(int position);
     }
 
-    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener) {
+    public interface  OnClickListener {
+        void onItemClicked(int position);
+    }
+
+    List<String> items;
+    OnLongClickListener longClickListener;
+    OnClickListener clickListener;
+
+    public ItemsAdapter(List<String> items, OnLongClickListener longClickListener, OnClickListener clickListener) {
         this.items = items;
         this.longClickListener = longClickListener;
+        this.clickListener = clickListener;
     }
 
     @NonNull
@@ -64,6 +68,12 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
                 public boolean onLongClick(View view) {
                     longClickListener.onItemLongClicked(getAdapterPosition());
                     return true;
+                }
+            });
+            tvItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    clickListener.onItemClicked(getAdapterPosition());
                 }
             });
         }
