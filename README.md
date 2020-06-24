@@ -36,6 +36,7 @@ Describe any challenges encountered while building the app.
 
 I had my EditText View and Button View placed above the Recycler View in activity_main.xml which caused them to not be clickable.
 I also accidentally imported the android FileUtils instead of the commons-io FileUtils.
+When I started the stretch feature Android Studio was not recognizing my activity_edit.xml, was fixed by clearing cache and restarting.
 
 ## License
 
