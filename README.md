@@ -16,7 +16,7 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-* [ ] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
+* [x] User can **tap a todo item in the list and bring up an edit screen for the todo item** and then have any changes to the text reflected in the todo list
 
 The following **additional** features are implemented:
 
@@ -26,7 +26,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](https://github.com/matt-davison/SimpleTodo/blob/master/Kapture%202020-06-23%20at%2023.34.23.gif)
+![Video Walkthrough](https://github.com/matt-davison/SimpleTodo/blob/master/Kapture%202020-06-24%20at%202.16.18.gif)
 
 GIF created with [Kap](https://getkap.co/).
 
